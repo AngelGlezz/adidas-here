@@ -1,0 +1,134 @@
+{
+  "preguntas": [
+    {
+      "pregunta": "1",
+      "respuestas": [
+        {
+          "respuesta": "Haces la jugada sólo",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Buscas apoyo",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "2",
+      "respuestas": [
+        {
+          "respuesta": "No pierdes la calma y buscas la mejor opción",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Sacas una jugada de magia y liberas espacios",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "3",
+      "respuestas": [
+        {
+          "respuesta": "Busco burlar a los defensas y acabar la jugada",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Tiras con fuerza buscando el ángulo",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "4",
+      "respuestas": [
+        {
+          "respuesta": "Esperas el centro, seguro lo ganas",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Buscas el desmarque para tener un espacio más cómodo",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "5",
+      "respuestas": [
+        {
+          "respuesta": "Sales en busca del contra golpe",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Esperas a tener opciones para salir jugando",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "6",
+      "respuestas": [
+        {
+          "respuesta": "A lo panenka. ¡Hay que arriesgar!",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Buscas asegurarlo a tu perfil para anotarlo",
+          "tipo": "true"
+        }
+      ]
+    },
+    {
+      "pregunta": "7",
+      "respuestas": [
+        {
+          "respuesta": " Metes golazo seguro al ángulo",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Buscas hacer una jugada ensayada que siempre funciona",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "8",
+      "respuestas": [
+        {
+          "respuesta": " Haces todo lo posible para resolver el juego porque confían en ti",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Buscas el éxito en conjunto. Estás seguro que entre todos lo pueden sacar adelante",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "9",
+      "respuestas": [
+        {
+          "respuesta": "Te arriesgas con una chilena para anotar. Que todos recuerden quién eres",
+          "tipo": "true"
+        },
+        {
+          "respuesta": "Aseguras tu remate de cabeza para que el portero no lo alcance",
+          "tipo": "false"
+        }
+      ]
+    },
+    {
+      "pregunta": "10",
+      "respuestas": [
+        {
+          "respuesta": "Bailas con tus compañeros, el gol es de todos",
+          "tipo": "false"
+        },
+        {
+          "respuesta": "Mandas a callar a la porra visitante, que les quede claro quién es la estrella",
+          "tipo": "false"
+        }
+      ]
+    }
+  ]
+};

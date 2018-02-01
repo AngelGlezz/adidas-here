@@ -222,78 +222,6 @@ $("#indepth_boton_empezar").on("click",function(){
 			"visibility":"visible",
 			"height": "auto"
 		});
-
-		/*var ancho = parseInt($( window ).width());
-
-		if (ancho >= 768) {
-			$(".red").mouseenter(function(){
-				var ele = parseInt($(this).attr("ele"));
-				$(this).children().attr("src", "images/preguntas/red"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #C63031"});
-				var bottom = $(this).next().next().children()[0];
-				$(bottom).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031", "z-index" : "100"});
-				$(this).css({"position":"relative"});		
-			}).mouseleave(function(){
-				var ele = parseInt($(this).attr("ele"));
-				$(this).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
-				var bottom = $(this).next().next().children()[0];
-				$(bottom).css({"background-color": "#464646", "box-shadow": "none", "z-index" : "1"});
-				$(this).css({"position":"inherit"});	
-			});
-
-			$(".hot").mouseenter(function(){
-				var parent = $(this).parent().parent().children()[0];
-				var ele = parseInt($(parent).attr("ele"));
-				$(parent).children().attr("src", "images/preguntas/red"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #C63031"});
-				$(parent).css({"position":"relative"});
-				$(this).css({"background-color": "#C63031", "box-shadow": "1px 2px 15px 10px #C63031", "z-index" : "100"});
-			}).mouseleave(function(){
-				//var ele = parseInt($(".red").attr("ele"));
-				var parent = $(this).parent().parent().children()[0];
-				var ele = parseInt($(parent).attr("ele"));
-				$(parent).children().attr("src", "images/preguntas/fire"+(ele+1)+".jpg").css({"box-shadow": "none"});
-				$(parent).css({"position":"inherit"});
-				$(this).css({"background-color": "#464646", "box-shadow": "none", "z-index" : "1"});					
-			})
-
-			$(".blue").mouseenter(function(){
-				var ele = parseInt($(this).attr("ele"));
-				$(this).children().attr("src", "images/preguntas/blue"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #2db2de"});
-				var bottom = $(this).next().children()[1];
-				$(bottom).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de", "z-index" : "100"});	
-				$(this).css({"position":"relative"});
-			}).mouseleave(function(){
-				var ele = parseInt($(this).attr("ele"));
-				$(this).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
-				var bottom = $(this).next().children()[1];
-				$(bottom).css({"background-color": "#464646", "box-shadow": "none", "z-index" : "1"});
-				$(this).css({"position":"inherit"});		
-			});
-
-			$(".ice").mouseenter(function(){
-				var parent = $(this).parent().parent().children()[1];
-				var ele = parseInt($(parent).attr("ele"));
-				$(parent).children().attr("src", "images/preguntas/blue"+(ele+1)+".jpg").css({"box-shadow": "1px 2px 15px 10px #2db2de"});
-				$(parent).css({"position":"relative"});
-				$(this).css({"background-color": "#2db2de", "box-shadow": "1px 2px 15px 10px #2db2de", "z-index" : "100"});	
-			}).mouseleave(function(){
-				var parent = $(this).parent().parent().children()[1];
-				var ele = parseInt($(parent).attr("ele"));
-				$(parent).children().attr("src", "images/preguntas/ice"+(ele+1)+".jpg").css({"box-shadow": "none"});
-				$(parent).css({"position":"inherit"});
-				$(this).css({"background-color": "#464646", "box-shadow": "none", "z-index" : "1"});			
-			});
-		} else {
-			$(".red img").each(function(index) {
-			  	$(this).attr("src", "images/preguntas/red"+(index+1)+".jpg");
-				//$(".blue img").attr("src", "images/preguntas/blue"+(index+1)+".jpg");
-			});
-
-			$(".blue img").each(function(index) {
-				$(this).attr("src", "images/preguntas/blue"+(index+1)+".jpg");
-			});
-			
-			
-		}*/
 		
 		$("#nav-bar-stats,#top-bar-wrapper,#body-wrapper").hide();
 		
@@ -401,81 +329,6 @@ $("#indepth_boton_empezar").on("click",function(){
 			}
 			return respuesta;
 		});
-
-		/*$(document).on("click",".red",function(){
-				if(!$(this).hasClass("disable")){
-				var respuesta_cont = $(this).next().next();
-				var pregunta_num = respuesta_cont.attr("num");
-				var respuesta_num = $(".hot").attr("num");
-				var pregunta_obj = preguntas[pregunta_num];
-				var respuesta_obj = pregunta_obj.respuestas[respuesta_num];
-				
-				$(this).addClass("select");
-				respuesta.push(respuesta_num);
-				console.log(respuesta);
-				
-				respuesta_cont.find('.indepth_respuesta_item').removeClass("active").addClass("disable");
-				respuesta_cont.find('.indepth_respuesta_item').click(false);
-				$(this).parent().children().addClass("disable");
-				$(this).click(false);
-
-				//$(".red,.hot,.fire,.ice").unbind();
-				$(this).unbind();
-				$(this).next().unbind();
-				
-				$(this).parent().find('.indepth_respuestas_cont').children().unbind();
-					
-					if(respuesta.length == preguntas.length){
-						var total = countMaxValue(respuesta);
-						console.log(total);
-						window.setTimeout(function(){
-							console.log("time");
-							console.log(total);
-							finish_test(total);
-						});
-					}
-				return respuesta;
-			}
-			
-		});
-
-		$(document).on("click",".blue",function(){
-				if(!$(this).hasClass("disable")){
-				var respuesta_cont = $(this).next();
-				var pregunta_num = respuesta_cont.attr("num");
-				var respuesta_num = $(".ice").attr("num");
-				var pregunta_obj = preguntas[pregunta_num];
-				var respuesta_obj = pregunta_obj.respuestas[respuesta_num];
-				
-				$(this).addClass("select");
-				respuesta.push(respuesta_num);
-				console.log(respuesta);
-				
-				respuesta_cont.find('.indepth_respuesta_item').removeClass("active").addClass("disable");
-				respuesta_cont.find('.indepth_respuesta_item').click(false);
-				$(this).click(false);
-				$(this).parent().children().addClass("disable");
-				
-
-				//$(".red,.hot,.fire,.ice").unbind();
-				$(this).unbind();
-				$(this).prev().unbind();
-				
-				$(this).parent().find('.indepth_respuestas_cont').children().unbind();
-					
-					if(respuesta.length == preguntas.length){
-						var total = countMaxValue(respuesta);
-						console.log(total);
-						window.setTimeout(function(){
-							console.log("time");
-							console.log(total);
-							finish_test(total);
-						});
-					}
-				return respuesta;
-			}
-			
-		});*/
 });
 
 function finish_test(total){
@@ -516,12 +369,6 @@ function finish_test(total){
 			"background-color": "#2C87AB"
 		});
 	}
-
-	/*if (total == 0) {
-		$("#store a").attr("href", "https://store.nike.com/mx/es_la/pw/hombre-rojo-f%C3%BAtbol-calzado/7puZ81eZoi3Zpd4");
-	} else {
-		$("#store a").attr("href", "https://store.nike.com/mx/es_la/pw/hombre-azul-f%C3%BAtbol-calzado/7puZahmZoi3Zpd4");
-	}*/
 
 	$("#indepth_resultados").animate({
 	  	"left": 0

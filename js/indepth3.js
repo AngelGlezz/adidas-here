@@ -54,7 +54,7 @@ $("#indepth_boton_empezar").on("click",function(){
 	 var data = {
 				  "preguntas": [
 				    {
-				      "pregunta": '<img src="images/preguntas/P1.png">',
+				      "pregunta": '<img src="' + urlIndepth + 'images/preguntas/P1.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Intento todas las jugadas solo. Seguro una acaba en gol",
@@ -72,7 +72,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P2.png">',
+				      "pregunta": '<img src="' + urlIndepth + 'images/preguntas/P2.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Saco al portero y se la paso a mi compañero. El equipo antes que la fama.",
@@ -89,7 +89,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P3.png">',
+				      "pregunta": '<img src="' + urlIndepth + 'images/preguntas/P3.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Entrené toda la semana para este momento. El gol olímpico cae seguro",
@@ -106,7 +106,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P4.png">',
+				      "pregunta": '<img src="' + urlIndepth + 'images/preguntas/P4.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "La coloco donde nadie, la barrera salta y el balón pasó justo abajo de ellos. Golazo",
@@ -123,7 +123,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P5.png">',
+				      "pregunta": '<img src="' + urlIndepth + 'images/preguntas/P5.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Soy técnico. Me gusta hacer jugar a todo mi equipo",
@@ -140,7 +140,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P6.png">',
+				      "pregunta": '<img src="' + urlIndepth + 'images/preguntas/P6.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Por su historia",
@@ -157,7 +157,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P7.png">',
+				      "pregunta": '<img src="' + urlIndepth + 'images/preguntas/P7.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "Me gusta explotar mi velocidad. Ni el número me alcanzan a ver",
@@ -174,7 +174,7 @@ $("#indepth_boton_empezar").on("click",function(){
 				      ]
 				    },
 				    {
-				      "pregunta": '<img src="images/preguntas/P8.png">',
+				      "pregunta": '<img src="' + urlIndepth + 'images/preguntas/P8.png">',
 				      "respuestas": [
 				        {
 				          "respuesta": "El mejor de todos. Nadie sabe qué haré cuando tengo el balón",
@@ -250,7 +250,7 @@ $("#indepth_boton_empezar").on("click",function(){
 			/*respuesta.push(respuesta_num);
 			console.log(respuesta);*/
 			var img_ele = $(this).parent().parent().find(".indepth_pregunta_img").get(num_resp);
-			$(img_ele).children().attr("src", "images/preguntas/"+(ele)+"_"+(num)+".png")
+			$(img_ele).children().attr("src", urlIndepth + "images/preguntas/"+(ele)+"_"+(num)+".png")
 			
 			respuesta_cont.find('.indepth_respuesta_item').removeClass("active").addClass("disable");
 			respuesta_cont.find('.indepth_respuesta_item').click(false);
@@ -298,7 +298,7 @@ $("#indepth_boton_empezar").on("click",function(){
 			$(this).next().addClass("select");
 			/*respuesta.push(respuesta_num);
 			console.log(respuesta);*/
-			$(this).children().attr("src", "images/preguntas/"+(ele)+"_"+(num)+".png")
+			$(this).children().attr("src", urlIndepth + "images/preguntas/"+(ele)+"_"+(num)+".png")
 			
 			$(this).parent().find(".indepth_respuestas_cont").children().removeClass("active").addClass("disable");
 			$(this).parent().find(".indepth_respuestas_cont").children().click(false);
@@ -387,23 +387,13 @@ function finish_test(total){
 			text = encodeURIComponent("¡Un Luis Suáres en su máxima potencia! Corres, luchas, recuperas y metes goles, nadie te detiene.");
 		}
 		
-		var url = encodeURIComponent("http://juanfutbol.com/indepth/adidas-here");
+		var url = encodeURIComponent("http://juanfutbol.com/indepth/here-to-create");
 		window.open("https://twitter.com/share?text="+text+"&hashtags=JFAdidas&url="+url,"","width=500, height=300");
 	});
 
 	$("#indepth_facebook").click(function(){
-  		var text = "";
-		if (total == 0) {
-			text = encodeURIComponent("!Eres un maestro del control! No lo esperaba. Te rifas tanto como Pogba");
-		} else if (total == 1) {
-			text = encodeURIComponent("Lo tuyo lo tuyo es hacer que lo imposible suceda. Messi te querría seguro en su equipo");
-		} else {
-			text = encodeURIComponent("¡Un Luis Suáres en su máxima potencia! Corres, luchas, recuperas y metes goles, nadie te detiene.");
-		}
-		
-		var url = encodeURIComponent("http://juanfutbol.com/indepth/adidas-here");
-		window.open("https://www.facebook.com/sharer/sharer.php?text="+text+"&hashtags=JFAdidas&url="+url,"","width=500, height=300");
-		//https://facebook.com/share?text=
+		var url = encodeURIComponent("http://juanfutbol.com/indepth/here-to-create?m="+total);
+		window.open("https://www.facebook.com/sharer/sharer.php?u="+url,"","width=500, height=300");
 	});
 }
 

@@ -387,7 +387,7 @@ function finish_test(total){
 		}
 		
 		var url = encodeURIComponent("http://juanfutbol.com/indepth/adidas-here");
-		window.open("https://twitter.com/share?text="+text+"&hashtags=JFNike&url="+url,"","width=500, height=300");
+		window.open("https://twitter.com/share?text="+text+"&hashtags=JFAdidas&url="+url,"","width=500, height=300");
 	});
 
 	$("#indepth_facebook").click(function(){
@@ -401,7 +401,7 @@ function finish_test(total){
 		}
 		
 		var url = encodeURIComponent("http://juanfutbol.com/indepth/adidas-here");
-		window.open("https://facebook.com/share?text="+text+"&hashtags=JFNike&url="+url,"","width=500, height=300");
+		window.open("https://facebook.com/share?text="+text+"&hashtags=JFAdidas&url="+url,"","width=500, height=300");
 	});
 }
 

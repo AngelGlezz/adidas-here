@@ -29,7 +29,7 @@
 	margin: auto;
 	color: #fff;
 	position: relative;
-	top: -120px;
+	top: -90px;
 }
 
 #indepth_portada_text{
@@ -625,7 +625,7 @@ a:link, a:visited {
 	text-align: center;
 	visibility: hidden;
 	position: relative;
-	display: table;
+	display: none;
 }
 
 .indepth_result_container{
@@ -714,7 +714,8 @@ a:link, a:visited {
 }
 
 #inner_content {
-	width: 690px;
+	width: 100%;
+	max-width: 690px;
 	margin: auto;
 	position: relative;
 }
@@ -809,6 +810,10 @@ a:link, a:visited {
 	.indepth_pregunta, .indepth_pregunta img{
 		width: 100%;
 	}
+
+	#indepth_resultados {
+		background-size: 205%;
+	}
 }
 
 @media screen and (max-width: 604px) {
@@ -860,11 +865,6 @@ a:link, a:visited {
 	    width: 400px;
 	    max-width: 600px;
 	}
-
-	#indepth_resultados .inner {
-		top: 300px;
-	}
-
 }
 
 @media screen and (max-width: 420px) {
@@ -873,6 +873,15 @@ a:link, a:visited {
 		height: 47px;
 		float: none;
 		margin: 10px auto;
+	}
+
+	#indepth_twittear, #indepth_facebook {
+		width: 30px;
+		height: 30px;
+	}
+
+	.inner {
+    	width: 70px;
 	}
 }
 

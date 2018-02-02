@@ -340,6 +340,7 @@ function finish_test(total){
 	var ventana_ancho = $(window).width();
 	var img = total;
 	console.log(total);
+	$("#indepth_resultados").css({"display": "table"});
 
 	if (img == 0) {
 		$("#indepth_resultados").css({
@@ -348,7 +349,7 @@ function finish_test(total){
 			"top": 0,
 			"left": -ventana_ancho,
 			"background-image": "url("+urlIndepth+"images/respuestas/" + img + ".jpg)",
-			"background-color": "#C63031"
+			"background-color": "#a81d1f"
 		});
 	} else if (img == 1) {
 		$("#indepth_resultados").css({
@@ -357,7 +358,7 @@ function finish_test(total){
 			"top": 0,
 			"left": -ventana_ancho,
 			"background-image": "url("+urlIndepth+"images/respuestas/" + img + ".jpg)",
-			"background-color": "#2C87AB"
+			"background-color": "#a81d1f"
 		});
 	} else if (img == 2) {
 		$("#indepth_resultados").css({
@@ -366,7 +367,7 @@ function finish_test(total){
 			"top": 0,
 			"left": -ventana_ancho,
 			"background-image": "url("+urlIndepth+"images/respuestas/" + img + ".jpg)",
-			"background-color": "#2C87AB"
+			"background-color": "#a81d1f"
 		});
 	}
 
@@ -401,7 +402,8 @@ function finish_test(total){
 		}
 		
 		var url = encodeURIComponent("http://juanfutbol.com/indepth/adidas-here");
-		window.open("https://facebook.com/share?text="+text+"&hashtags=JFAdidas&url="+url,"","width=500, height=300");
+		window.open("https://www.facebook.com/sharer/sharer.php?text="+text+"&hashtags=JFAdidas&url="+url,"","width=500, height=300");
+		//https://facebook.com/share?text=
 	});
 }
 
